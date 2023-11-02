@@ -16,6 +16,9 @@ app.use(indexRoutes)
 app.use(taskRoutes)
 
 console.log(PORT);
+app.use(cors({
+    origin: ["http://localhost4000", "https://mern-tasks-crud.onrender.com"]
+}))
 
 app.use(express.static(_dirname + '/dist'))
 
